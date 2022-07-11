@@ -1,62 +1,9 @@
 const Resume = require("../models/resume");
 
 // This controller is called when the user requests for details of his/her resume.
-exports.getResume = async (req, res) => {
-  const { user_id } = req;
-  const resume = await Resume.findOne({ user_id: `${user_id}` });
-  res.status(200).json({
-    success: true,
-    resume,
-  });
-};
+
 
 // This controller is called when the user posts resume.
-exports.postResume = async (req, res) => {
-  const { user_id } = req;
-  const {
-    firstName,
-    lastName,
-    currentCity,
-    postalCode,
-    email,
-    phone,
-    degree,
-    fieldOfStudy,
-    college,
-    year,
-    jobTitle,
-    company,
-    jobCity,
-    jobYear,
-    jobDesc,
-    skills,
-  } = req.body;
-
-  const resume = await Resume.create({
-    user_id,
-    firstName,
-    lastName,
-    currentCity,
-    postalCode,
-    email,
-    phone,
-    degree,
-    fieldOfStudy,
-    college,
-    year,
-    jobTitle,
-    company,
-    jobCity,
-    jobYear,
-    jobDesc,
-    skills,
-  });
-
-  res.status(200).json({
-    success: true,
-    resume,
-  });
-};
 
 // This controller is called when the user requests for an update in the resume.
 // This controller sends all resume details to the user.
