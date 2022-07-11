@@ -1,4 +1,4 @@
-# VMWare CodeHouse 2022
+# VMware CodeHouse India 2022
 ## Team Name: PHOEMORA
 
 ### Problem Statement
